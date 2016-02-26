@@ -1,0 +1,21 @@
+<h1>New Comment form</h1>
+<%= flash_message %>
+<% if @errors #@entry.errors.any?%>
+  <ul>
+    <% @errors.each do |error|%>
+    <li><%= error %></li>
+    <%end %>
+  </ul>
+<%end %>
+<%= form_for @comment  do |f| %>
+  <%= f.label :user %>
+  <%= f.email_field :user %>
+  <br>
+  <%= f.label :comment %><br>
+  <%= f.text_area :comment, size: "60x12" %>
+  <br>
+  <%= f.submit 'Save Comment' %>
+  <br>
+  <%= link_to "Back to concert",new_concert_comment_path(@concert.id) %>
+
+  <% end %>

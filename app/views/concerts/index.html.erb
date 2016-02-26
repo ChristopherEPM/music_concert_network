@@ -1,0 +1,16 @@
+<nav>
+  <h2> Later this month</h2>
+  <ul>
+    <% @concerts_tm.each do |concert|%>
+    <li><%= link_to(concert.artist, concert_path(concert.id)) %></li>
+    <% end %>
+  </ul>
+</nav>
+<article>
+  <h1> Concert Today</h1>
+  <ul>
+    <% @concerts_tod.each do |concert|%>
+      <li><%= link_to(concert.artist, concert_path(concert.id)) %></li>
+    <% end %>
+  </ul>
+</article>

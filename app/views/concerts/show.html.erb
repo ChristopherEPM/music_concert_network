@@ -1,0 +1,9 @@
+<div>
+    <p><b>Artist: </b><%=@concert.artist %></p>
+    <p><b>Date: </b><%=@concert.date %></p>
+    <p><b>City: </b><%=@concert.city %></p>
+    <p><b>Venue: </b><%=@concert.venue %></p>
+    <p><b>Price: </b><%=@concert.price %> €</p>
+    <p><b>Description: </b><br><%=@concert.description %></p>
+    <%= link_to "Add comment",concert_path(@concert.id) %>
+</div>
